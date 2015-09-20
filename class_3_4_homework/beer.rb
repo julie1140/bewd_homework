@@ -1,5 +1,5 @@
 # This program uses loops to output the song "99 Bottles of Beer on the Wall
-i=3
+i=99
 until i==0 do
   p1="#{i} bottle"
   if i==1 then p2=" of beer" else p2="s of beer" end
