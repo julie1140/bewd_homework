@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='UTF-8' />
+    <title>The Dumb Human Game</title>
+    <link href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css' rel='stylesheet' />
+  </head>
+  <body class='container'>
+    <h1>Let's Play a Game I like to Call:</h1>
+    <h2>The Dumb Human vs. The Brilliant Computer</h2>
+    <p>PICK YOUR WEAPON, YOU DUMB HUMAN!</p>
+    <form action='results' method='post'>
+      <ul class='unstyled'>
+        <% Choices.each do |id, text| %>
+          <li>
+            <label class='radio'>
+              <input type='radio' name='weapon' value='<%= id %>' id='weapon_<%= id %>' />
+              <%= text %>
+            </label>
+          </li>
+        <% end %>
+      </ul>
+      <button type='submit' class='btn btn-primary'>PREPARE TO DIE!</button>
+    </form>
+  </body>
+</html>
