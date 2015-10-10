@@ -7,6 +7,15 @@
     <link href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css' rel='stylesheet' />
   </head>
   <body class='container'>
+    <h1> Hello <%= params[:name] %>
+    <h1> Your favorite color is <%= params[:color] %>
+    <% if params[:color]=="blue" %>
+      <hr>
+      Woohoo!!!
+      <hr>
+      <%= params[:name].upcase + " " + "You're awesome!" %>
+      <%=  "Blue is awesome!" %>
+    <% end %>
     <h1>Let's Play a Game I like to Call:</h1>
     <h2>The Dumb Human vs. The Brilliant Computer</h2>
     <p>PICK YOUR WEAPON, YOU DUMB HUMAN!</p>

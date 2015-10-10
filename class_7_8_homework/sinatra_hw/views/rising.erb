@@ -1,0 +1,36 @@
+<title> Rising Stories </title>
+<style>
+  body {
+    text-align: center;
+    background-size: cover;
+    background-color: yellow;
+    background-size: cover;
+    background-position: center;
+    color: black;
+    font-family: Arial;
+  }
+  p {
+    font-size: 22px;
+  }
+  input {
+    border: 0;
+    padding: 10px;
+    font-size: 18px;
+  }
+</style>
+<body>
+
+<h2> Here are the rising titles:</h2>
+<hr>
+
+
+  <% @articles["rising"].each do |article| %>
+  <a href="<%= article["link"]%>" </a>
+  <li> <%= article["author"] %> : <%= article["title"] %></li>
+  <% end %>
+
+
+
+<br>
+
+<a href="/">Go Back</a>
