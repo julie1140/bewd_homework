@@ -1,0 +1,11 @@
+<h1>CAUTION!
+<br>
+YOU ARE ENTERING THE SUPER SECRET MILITARY MAINFRAME
+</h1>
+<h2>YOU MUST ENTER THE PASSCODE BELOW TO CONTINUE</h2>
+
+<%= form_tag("/mainframe", method: "post") do %>
+  <%= label_tag(:passcode, "ENTER PASSCODE HERE") %>
+  <%= password_field_tag(:passcode) %>
+  <%= submit_tag ("SUBMIT") %>
+<% end %>
