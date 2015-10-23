@@ -1,0 +1,25 @@
+<h1>SALADS & SMOOTHIES</h1>
+<h2> What do you want in your salad? </h2>
+<p> Note that items in red may not be available </p>
+<a href="/">Back</a>
+<img src="https://scontent-lax3-1.xx.fbcdn.net/hphotos-xap1/v/t1.0-9/11947693_10153639514949901_4155946769556718218_n.jpg?oh=c99e4e95b83b049b9d927051ababe0e5&oe=56D22B0E"> 
+<hr>
+<h2> Vegetable Options: </h2>
+<% @saladingredients.each do |ingredient| %>
+<% if ingredient.category=="vegetable" %>
+  <li><p1 class="<%= "red" if ingredient.quantity <= 3 %>">
+    <%= ingredient.ingredient.capitalize %>: <%= ingredient.quantity %>
+    <%= ingredient.unit %> </p1></li>
+    <br>
+    <% end  %>
+<% end %>
+
+<h2> Protein Options: </h2>
+<% @saladingredients.each do |ingredient| %>
+<% if ingredient.category=="protein" %>
+  <li><p1 class="<%= "red" if ingredient.quantity <= 3 %>">
+    <%= ingredient.ingredient.capitalize %>: <%= ingredient.quantity %>
+    <%= ingredient.unit %> </p1></li>
+    <br>
+    <% end  %>
+<% end %>

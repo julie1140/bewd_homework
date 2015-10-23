@@ -1,0 +1,18 @@
+<html>
+<body>
+
+<h1>Welcome to Your Garage App!</h1>
+<p>Here are the cars in your garage:</p>
+
+<% @cars.each do |car| %>
+<table border="1" style="width:50%">
+  <tr>
+    <td><%= car.nickname %></td>
+    <td><%= car.make %></td>
+    <td><%= car.car_model %></td>
+    <td><%= car.color %></td>
+    <td><%= car.year %></td>
+  </tr>
+</table>
+</body>
+<% end %>

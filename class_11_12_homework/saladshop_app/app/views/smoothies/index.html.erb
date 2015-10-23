@@ -1,0 +1,45 @@
+<h1>SALADS & SMOOTHIES</h1>
+<h2> What do you want in your smoothie? </h2>
+<p> Note that items in red may not be available </p>
+<a href="/">Back</a>
+<img src="https://scontent-lax3-1.xx.fbcdn.net/hphotos-xft1/v/t1.0-9/11692752_10153483997729901_3350041063866017669_n.jpg?oh=3e56dca2b61b490314141912de6452ef&oe=568818AD">
+<hr>
+<h2> Vegetable Options: </h2>
+<% @smoothies.each do |ingredient| %>
+<% if ingredient.category=="vegetable" %>
+  <li><p1 class="<%= "red" if ingredient.quantity <= 2 %>">
+    <%= ingredient.ingredient.capitalize %>: <%= ingredient.quantity %>
+    <%= ingredient.unit %> </p1></li>
+    <br>
+    <% end  %>
+<% end %>
+
+<h2> Fruit Options: </h2>
+<% @smoothies.each do |ingredient| %>
+<% if ingredient.category=="fruit" %>
+  <li><p1 class="<%= "red" if ingredient.quantity <= 2 %>">
+    <%= ingredient.ingredient.capitalize %>: <%= ingredient.quantity %>
+    <%= ingredient.unit %> </p1></li>
+    <br>
+    <% end  %>
+<% end %>
+
+<h2> Dairy Options: </h2>
+<% @smoothies.each do |ingredient| %>
+<% if ingredient.category=="dairy" %>
+  <li><p1 class="<%= "red" if ingredient.quantity <= 2 %>">
+    <%= ingredient.ingredient.capitalize %>: <%= ingredient.quantity %>
+    <%= ingredient.unit %> </p1></li>
+    <br>
+    <% end  %>
+<% end %>
+
+<h2> Non-Dairy Options: </h2>
+<% @smoothies.each do |ingredient| %>
+<% if ingredient.category=="dairy" %>
+  <li><p1 class="<%= "red" if ingredient.quantity <= 2 %>">
+    <%= ingredient.ingredient.capitalize %>: <%= ingredient.quantity %>
+    <%= ingredient.unit %> </p1></li>
+    <br>
+    <% end  %>
+<% end %>
